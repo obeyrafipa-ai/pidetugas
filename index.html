@@ -1,0 +1,226 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="es">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Configurar Recordatorio Mensual</title>\
+    <style>\
+        :root \{\
+            --primary: #4f46e5;\
+            --primary-hover: #4338ca;\
+            --bg: #f3f4f6;\
+            --card: #ffffff;\
+            --text: #1f2937;\
+        \}\
+        body \{\
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;\
+            background-color: var(--bg);\
+            color: var(--text);\
+            display: flex;\
+            justify-content: center;\
+            align-items: center;\
+            min-height: 100vh;\
+            margin: 0;\
+            padding: 20px;\
+            box-sizing: border-box;\
+        \}\
+        .card \{\
+            background: var(--card);\
+            padding: 30px;\
+            border-radius: 16px;\
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);\
+            width: 100%;\
+            max-width: 420px;\
+            text-align: center;\
+        \}\
+        h1 \{\
+            font-size: 1.5rem;\
+            margin-bottom: 10px;\
+            font-weight: 700;\
+        \}\
+        .frase-box \{\
+            background: #f9fafb;\
+            border-left: 4px solid var(--primary);\
+            padding: 15px;\
+            margin: 20px 0;\
+            border-radius: 4px;\
+            font-style: italic;\
+            text-align: left;\
+        \}\
+        label \{\
+            display: block;\
+            font-weight: 600;\
+            margin-bottom: 8px;\
+            text-align: left;\
+            font-size: 0.9rem;\
+        \}\
+        input[type="date"] \{\
+            width: 100%;\
+            padding: 12px;\
+            border: 1px solid #d1d5db;\
+            border-radius: 8px;\
+            font-size: 1rem;\
+            margin-bottom: 25px;\
+            box-sizing: border-box;\
+            outline: none;\
+        \}\
+        input[type="date"]:focus \{\
+            border-color: var(--primary);\
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);\
+        \}\
+        .btn \{\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            width: 100%;\
+            padding: 14px;\
+            margin-bottom: 12px;\
+            border: none;\
+            border-radius: 8px;\
+            font-size: 1rem;\
+            font-weight: 600;\
+            cursor: pointer;\
+            transition: background 0.2s;\
+            text-decoration: none;\
+            box-sizing: border-box;\
+        \}\
+        .btn-google \{\
+            background-color: #ffffff;\
+            color: #757575;\
+            border: 1px solid #d1d5db;\
+        \}\
+        .btn-google:hover \{\
+            background-color: #f7f9fa;\
+        \}\
+        .btn-apple \{\
+            background-color: #000000;\
+            color: #ffffff;\
+        \}\
+        .btn-apple:hover \{\
+            background-color: #1a1a1a;\
+        \}\
+        .btn svg \{\
+            margin-right: 10px;\
+            width: 20px;\
+            height: 20px;\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+<div class="card">\
+    <h1>Tu Recordatorio Mensual</h1>\
+    <p style="color: #6b7280; font-size: 0.95rem;">Elige el d\'eda en el que deseas recibir la notificaci\'f3n cada mes:</p>\
+    \
+    <div class="frase-box">\
+        <!-- MODIFICA AQU\'cd TU FRASE PERSONALIZADA -->\
+        \'93Pide Tu GAS URIBE HOY.\'94\
+    </div>\
+\
+    <label for="fecha">Selecciona el d\'eda de inicio:</label>\
+    <input type="date" id="fecha" required>\
+\
+    <!-- Bot\'f3n para Google Calendar -->\
+    <button class="btn btn-google" onclick="agregarGoogle()">\
+        <svg viewBox="0 0 24 24">\
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>\
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>\
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l3.66-2.85z"/>\
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.85c.87-2.6 3.3-4.53 6.16-4.53z"/>\
+        </svg>\
+        Guardar en Google Calendar\
+    </button>\
+\
+    <!-- Bot\'f3n para Apple / Outlook / Otros -->\
+    <button class="btn btn-apple" onclick="agregarApple()">\
+        <svg viewBox="0 0 24 24" fill="currentColor">\
+            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.48C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.14,6.9 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z"/>\
+        </svg>\
+        Guardar en Apple Calendar\
+    </button>\
+</div>\
+\
+<script>\
+    // Configura autom\'e1ticamente el d\'eda de hoy de forma predeterminada en el input\
+    const hoy = new Date().toISOString().split('T')[0];\
+    document.getElementById('fecha').value = hoy;\
+\
+    // CONFIGURACI\'d3N DE TU EVENTO\
+    const TITULO_EVENTO = "Mi Recordatorio Mensual";\
+    const FRASE_EVENTO = "Este es tu momento del mes para revisar tus metas y respirar profundo.";\
+\
+    // Formatear fechas para los calendarios (YYYYMMDD)\
+    function obtenerFechasFormateadas(fechaInput) \{\
+        const dateObj = new Date(fechaInput + 'T09:00:00'); // Forzar hora de la ma\'f1ana 9:00 AM local\
+        \
+        const yyyy = dateObj.getFullYear();\
+        const mm = String(dateObj.getMonth() + 1).padStart(2, '0');\
+        const dd = String(dateObj.getDate()).padStart(2, '0');\
+        \
+        // Fecha de inicio limpia\
+        const fechaInicio = `$\{yyyy\}$\{mm\}$\{dd\}T090000`;\
+        // Fecha de fin (1 hora despu\'e9s)\
+        const fechaFin = `$\{yyyy\}$\{mm\}$\{dd\}T100000`;\
+        \
+        return \{ inicio: fechaInicio, fin: fechaFin \};\
+    \}\
+\
+    // L\'f3gica para Google Calendar\
+    function agregarGoogle() \{\
+        const fechaVal = document.getElementById('fecha').value;\
+        if (!fechaVal) return alert("Por favor selecciona un d\'eda.");\
+        \
+        const fechas = obtenerFechasFormateadas(fechaVal);\
+        \
+        const googleUrl = `https://google.com` +\
+            `&text=$\{encodeURIComponent(TITULO_EVENTO)\}` +\
+            `&details=$\{encodeURIComponent(FRASE_EVENTO)\}` +\
+            `&dates=$\{fechas.inicio\}/$\{fechas.fin\}` +\
+            `&recur=RRULE:FREQ=MONTHLY`; // Aqu\'ed se inyecta la recurrencia mensual\
+            \
+        window.open(googleUrl, '_blank');\
+    \}\
+\
+    // L\'f3gica para Apple Calendar (Generaci\'f3n din\'e1mica de archivo .ics)\
+    function agregarApple() \{\
+        const fechaVal = document.getElementById('fecha').value;\
+        if (!fechaVal) return alert("Por favor selecciona un d\'eda.");\
+        \
+        const fechas = obtenerFechasFormateadas(fechaVal);\
+\
+        // Estructura del est\'e1ndar iCalendar con recurrencia mensual (RRULE:FREQ=MONTHLY)\
+        const icsTXT = [\
+            "BEGIN:VCALENDAR",\
+            "VERSION:2.0",\
+            "PRODID:-//MiRecordatorio//NONSGML v1.0//ES",\
+            "BEGIN:VEVENT",\
+            `DTSTART:$\{fechas.inicio\}`,\
+            `DTEND:$\{fechas.fin\}`,\
+            `RRULE:FREQ=MONTHLY`, \
+            `SUMMARY:$\{TITULO_EVENTO\}`,\
+            `DESCRIPTION:$\{FRASE_EVENTO\}`,\
+            "END:VEVENT",\
+            "END:VCALENDAR"\
+        ].join("\\n");\
+\
+        // Crear un enlace temporal para descargar el archivo .ics autom\'e1ticamente\
+        const blob = new Blob([icsTXT], \{ type: 'text/calendar;charset=utf-8' \});\
+        const link = document.createElement('a');\
+        link.href = window.URL.createObjectURL(blob);\
+        link.download = "recordatorio-mensual.ics";\
+        document.body.appendChild(link);\
+        link.click();\
+        document.body.removeChild(link);\
+    \}\
+</script>\
+\
+</body>\
+</html>\
+}
